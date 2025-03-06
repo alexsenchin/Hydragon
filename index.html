@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Hydra Practice</title>
+</head>
+<body>
+    <h1>Hydra Practice - Выберите сложность пароля</h1>
+    <form method="POST" action="/login">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" name="username" value="admin" readonly required><br><br>
+        <button type="submit" name="difficulty" value="easy">Легкий пароль</button>
+        <button type="submit" name="difficulty" value="medium">Средний пароль</button>
+        <button type="submit" name="difficulty" value="hard">Сложный пароль</button>
+    </form>
+    <br>
+    <a href="/hydra-help"><button>Hydra Help</button></a>
+</body>
+</html>
